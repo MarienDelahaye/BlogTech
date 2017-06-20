@@ -1,9 +1,28 @@
-var now = new Date();
-var annee   = now.getFullYear();
-var mois    = now.getMonth() + 1;
-var jour    = now.getDate();
-var heure   = now.getHours();
-var minute  = now.getMinutes();
-var seconde = now.getSeconds();
-
-alert( "Nous sommes le "+jour+"/"+mois+"/"+annee+" et il est "+heure+" heure "+minute+" minutes "+seconde+" secondes" );
+<span id="time">00:00:00</span>
+<script type="text/javascript">
+var time = "0:0:0";
+function changeTime() {
+    var timeSplited = time.split(':');
+    var hour = timeSplited[0];
+    var minute = timeSplited[1];
+    var second = timeSplited[2];
+    second++;
+    if(second==60) {
+        second = '0';
+        minute++;
+        if(minute == 60){
+            minute = '0';
+            hour++;
+        }
+    }
+	hour = '0'+hour;
+	hour = hour.toString().substr(-2, 2);
+	minute = '0'+minute;
+	minute = minute.toString().substr(-2, 2);
+	second = '0'+second;
+	second = second.toString().substr(-2, 2);
+    time = hour+':'+minute+':'+second;
+    document.getElementById('time').innerHTML = time;
+}
+var instance = self.setInterval(changeTime ,1000);
+</script>
