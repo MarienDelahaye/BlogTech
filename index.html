@@ -11,6 +11,12 @@
     <script>
     document.write(Date());
     </script>
+    <div id="afficherheure"></div>
+<script type="text/javascript">
+setInterval(function(){
+    document.getElementById('afficherheure').innerHTML = new Date().toLocaleTimeString();
+}, 1000);
+</script>
     <title>Le blog 100% Hardware</title>
 
     <!-- Bootstrap Core CSS -->
@@ -209,4 +215,4 @@
 </body>
 
 </html>
-<script src="chemin/vers/le/script.js"></script>i
+<script src="js/main.js"></script>
