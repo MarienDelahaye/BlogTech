@@ -17,6 +17,7 @@ setInterval(function(){
     document.getElementById('afficherheure').innerHTML = new Date().toLocaleTimeString();
 }, 1000);
 </script>
+<script src"js/main.js"></script>
     <title>Le blog 100% Hardware</title>
 
     <!-- Bootstrap Core CSS -->
@@ -196,6 +197,11 @@ setInterval(function(){
 
         <!-- Footer -->
         <footer>
+          <script src="js/easytimer.min.js"></script>
+<script>
+    var timerInstance = new Timer();
+</script>
+          <div id="basicUsage">00:00:00</div>
             <div class="row">
                 <div class="col-lg-12">
                     <p>Copyright &copy; Marien 2017</p>
